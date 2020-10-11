@@ -1,0 +1,110 @@
+{
+	"TF_AutoAssign":
+	{
+		"style": "color:#ECE3CB;background-color:#766B5E",
+		"text": "<span class=MenuSmallFont>{{&TF_AutoAssign}}</span><br>(Press {{!TF_AutoAssign}} to auto assign.)"
+	},
+	"TF_BlueTeam":
+	{
+		"style": "color:#ECE3CB;background-color:#766B5E",
+		"text": "<span class=MenuSmallFont>{{&TF_BlueTeam}}</span><br>(Press {{!TF_BlueTeam}} to join {{#TF_BlueTeam_Name}} team.)"
+	},
+	"TF_RedTeam":
+	{
+		"style": "color:#ECE3CB;background-color:#766B5E",
+		"text": "<span class=MenuSmallFont>{{&TF_RedTeam}}</span><br>(Press {{!TF_RedTeam}} to join {{#TF_RedTeam_Name}} team.)"
+	},
+	"TF_GreenTeam":
+	{
+		"style": "color:#ECE3CB;background-color:#766B5E",
+		"text": "<span class=MenuSmallFont>{{&TF_GreenTeam}}</span><br>(Press {{!TF_GreenTeam}} to join {{#TF_GreenTeam_Name}} team.)"
+	},
+	"TF_YellowTeam":
+	{
+		"style": "color:#ECE3CB;background-color:#766B5E",
+		"text": "<span class=MenuSmallFont>{{&TF_YellowTeam}}</span><br>(Press {{!TF_YellowTeam}} to join {{#TF_YellowTeam_Name}} team.)"
+	},
+	"TF_Random":
+	{
+		"style": "color:#B4B4B4;background-color:#686670",
+		"text": "<h1 style=\"color:#ECECEC\" class=ChalkboardTitle>{{#TF_Random}}</h1><p class=ChalkboardText>{{#ClassTips_12_1}}</p>"
+	},
+	"TF_Mercenary_Name":
+	{
+		"reuse": "TF_BlueMercenary_Name"
+	},
+	"TF_RedMercenary_Name":
+	{
+		"style": "color: rgb(180,92,77);background-color:rgba(46,43,42,220)",
+		"reuse": "TF_BlueMercenary_Name"
+	},
+	"TF_BlueMercenary_Name":
+	{
+		"style": "color: rgb(104,124,155);background-color:rgba(46,43,42,220)",
+		"text": "<span class=Default1>{{value}}</span>"
+	},
+	"TF_GreenMercenary_Name":
+	{
+		"style": "color: rgb(88,147,70);background-color:rgba(46,43,42,220)",
+		"reuse": "TF_BlueMercenary_Name"
+	},
+	"TF_YellowMercenary_Name":
+	{
+		"style": "color: rgb(209,150,46);background-color:rgba(46,43,42,220)",
+		"reuse": "TF_BlueMercenary_Name"
+	},
+	"TF_Scout":
+	{
+		"style": "color:#B4B4B4;background-color:#686670",
+		"text": "<h1 style=\"color:#ECECEC\" class=ChalkboardTitle>{{#TF_Scout}}</h1><p class=ChalkboardText>{{#ClassTips_1_1}}</p><p class=ChalkboardText>{{#ClassTips_1_2}}</p>"
+	},
+	"TF_Sniper":
+	{
+		"style": "color:#B4B4B4;background-color:#686670",
+		"text": "<h1 style=\"color:#ECECEC\" class=ChalkboardTitle>{{#TF_Sniper}}</h1><p class=ChalkboardText>{{#ClassTips_2_1}}</p><p class=ChalkboardText>{{#ClassTips_2_2}}</p>"
+	},
+	"TF_Soldier":
+	{
+		"style": "color:#B4B4B4;background-color:#686670",
+		"text": "<h1 style=\"color:#ECECEC\" class=ChalkboardTitle>{{#TF_Soldier}}</h1><p class=ChalkboardText>{{#ClassTips_3_1}}</p><p class=ChalkboardText>{{#ClassTips_3_2}}</p>"
+	},
+	"TF_Demoman":
+	{
+		"style": "color:#B4B4B4;background-color:#686670",
+		"text": "<h1 style=\"color:#ECECEC\" class=ChalkboardTitle>{{#TF_Demoman}}</h1><p class=ChalkboardText>{{#ClassTips_4_1}}</p><p class=ChalkboardText>{{#ClassTips_4_2}}</p>"
+	},
+	"TF_Medic":
+	{
+		"style": "color:#B4B4B4;background-color:#686670",
+		"text": "<h1 style=\"color:#ECECEC\" class=ChalkboardTitle>{{#TF_Medic}}</h1><p class=ChalkboardText>{{#ClassTips_5_1}}</p><p class=ChalkboardText>{{#ClassTips_5_2}}</p>"
+	},
+	"TF_HWGuy":
+	{
+		"style": "color:#B4B4B4;background-color:#686670",
+		"text": "<h1 style=\"color:#ECECEC\" class=ChalkboardTitle>{{#TF_HWGuy}}</h1><p class=ChalkboardText>{{#ClassTips_6_1}}</p>"
+	},
+	"TF_Pyro":
+	{
+		"style": "color:#B4B4B4;background-color:#686670",
+		"text": "<h1 style=\"color:#ECECEC\" class=ChalkboardTitle>{{#TF_Pyro}}</h1><p class=ChalkboardText>{{#ClassTips_7_1}}</p><p class=ChalkboardText>{{#ClassTips_7_2}}</p>"
+	},
+	"TF_Spy":
+	{
+		"style": "color:#B4B4B4;background-color:#686670",
+		"text": "<h1 style=\"color:#ECECEC\" class=ChalkboardTitle>{{#TF_Spy}}</h1><p class=ChalkboardText>{{#ClassTips_8_1}}</p><p class=ChalkboardText>{{#ClassTips_8_2}}</p><p class=ChalkboardText>{{#ClassTips_8_3}}</p><p class=ChalkboardText>{{#ClassTips_8_4}}</p>"
+	},
+	"TF_Engineer":
+	{
+		"style": "color:#B4B4B4;background-color:#686670",
+		"text": "<h1 style=\"color:#ECECEC\" class=ChalkboardTitle>{{#TF_Engineer}}</h1><p class=ChalkboardText>{{#ClassTips_9_1}}</p><p class=ChalkboardText>{{#ClassTips_9_2}}</p><p class=ChalkboardText>{{#ClassTips_9_3}}</p>"
+	},
+	"TF_Civilian":
+	{
+		"style": "color:#B4B4B4;background-color:#686670",
+		"text": "<h1 style=\"color:#ECECEC\" class=ChalkboardTitle>{{#TF_Civilian}}</h1><p class=ChalkboardText>{{#ClassTips_10_1}}</p><p class=ChalkboardText>{{#ClassTips_10_2}}</p><p class=ChalkboardText>{{#ClassTips_10_3}}</p>"
+	},
+	"default":
+	{
+		"text": "{{value}}"
+	}
+}

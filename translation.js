@@ -134,12 +134,13 @@ function load(evt)
 			}
 		}
 	}
-	const keyvalues = document.getElementById("keyvalues");
+	var innerHTML = "";
 	for(var i = 0; i < listOrder.length; i++)
 	{
 		var key = listOrder[i];
-		keyvalues.innerHTML += "<input type=\"radio\" name=\"key\" class=\"radio\" id=\"" + key + "\" value=\"" + key + "\"/><label for=\"" + key + "\" class=\"radio\">" + key + "</label>";
+		innerHTML += "<input type=\"radio\" name=\"key\" class=\"radio\" id=\"" + key + "\" value=\"" + key + "\"/><label for=\"" + key + "\" class=\"radio\">" + key + "</label>";
 	}
+	document.getElementById("keyvalues").innerHTML = innerHTML;
 	keyvalues.addEventListener("click", (event) =>
 	{
 		if(event.target.nodeName != "INPUT") return;
@@ -149,7 +150,54 @@ function load(evt)
 function loadstring(key)
 {
 	const selection = document.getElementById("selection");
-	selection.innerHTML = list[key].replaceAll("\r", "").replaceAll("\n", "<br>");
+	selection.innerHTML = getstring(key);
+	selection.style.cssText = getstyle(key);
+}
+function getstring(key)
+{
+	var value = gethtmlstring(key);
+
+	var innerHTML;
+	if(styles[key] != undefined)
+	{
+		innerHTML = styles[key].text;
+		if(innerHTML == undefined && styles[key].reuse != undefined)
+		{
+			innerHTML = styles[styles[key].reuse].text;
+		}
+	}
+	if(innerHTML == undefined) innerHTML = styles["default"].text;
+	
+	var matches = innerHTML.match(/{{.*?}}/g);
+	for(var i = 0; i < matches.length; i++)
+	{
+		var r = matches[i];
+		if(matches[i] == "{{value}}") r = value;
+		else if(matches[i].startsWith("{{#")) r = gethtmlstring(matches[i].substr(3, r.length-5));
+		else if(matches[i].startsWith("{{&")) r = gethtmlstring(matches[i].substr(3, r.length-5)).replaceAll("&", "");
+		else if(matches[i].startsWith("{{!")) r = gethtmlstring(matches[i].substr(3, r.length-5)).substr(value.indexOf("&")+1,1);
+		innerHTML = innerHTML.replaceAll(matches[i], r);
+	}
+	return innerHTML;
+}
+function getstyle(key)
+{
+	var cssstyle;
+	if(styles[key] != undefined)
+	{
+		cssstyle = styles[key].style;
+		if(cssstyle == undefined && styles[key].reuse != undefined)
+		{
+			cssstyle = getstyle(styles[key].reuse);
+		}
+	}
+	if(cssstyle == undefined) css = styles["default"].style;
+	return cssstyle;
+}
+function gethtmlstring(key)
+{
+	if(list[key] == undefined) return "#" + key;
+	return list[key].replaceAll("\r", "").replaceAll("\n", "<br>");
 }
 
 function emptylist()

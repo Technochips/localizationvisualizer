@@ -1,16 +1,22 @@
 <html>
 	<head>
 		<title>TF2Classic Localization Visualizer</title>
+		<link rel="stylesheet" href="index.css">
 		<link rel="stylesheet" href="tf2classic.css">
 	</head>
 	<body>
+		<script type="text/javascript" src="jsonstyle.js"></script>
+		<script type="text/javascript" src="tf2classic.js"></script>
 		<script type="text/javascript" src="translation.js"></script>
-
-		<p>Warning: This takes a while to load large files (at least a minute). For some reason, this script consumes a lot of memory on Firefox.</p>
 
 		<label for="translation" class="translation">Select translation file:</label>
 		<input type="file" id="translation" name="translation" accept=".txt"/>
 		<input type="button" onclick="loadtranslation()" value="Load"/>
+		<br>
+		<label for="jsonstyle" class="jsonstyle">Select style file:</label>
+		<input type="file" id="jsonstyle" name="jsonstyle" accept=".json"/>
+		<input type="button" onclick="loadjsonstyle()" value="Load"/>
+		(<a href="tf2classic.json">default style file</a>, right click and download link)
 		<div id="keyvalues"></div>
 		<div id="selection"></div>
 	</body>

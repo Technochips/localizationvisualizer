@@ -1,0 +1,36 @@
+*
+{
+	font-family: sans-serif;
+	font-size: large;
+}
+body
+{
+	background-color: white;
+	color:black;
+}
+
+#keyvalues
+{
+	overflow-x: auto;
+	height: 256px;
+}
+input.radio
+{
+	display: none;
+}
+label.radio
+{
+	padding: 5px;
+	display: block;
+	margin: 0;
+	border: none;
+}
+label.radio:nth-child(4n+2)
+{
+	background-color: #CCC;
+}
+input.radio:checked + label.radio, input.radio:hover + label.radio
+{
+	background-color: cornflowerblue;
+	color: white;
+}
